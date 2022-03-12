@@ -37,24 +37,101 @@
             <think>
                 <set name="sign"><input index="1"/></set>
             </think>
+            
             <card>
                 <title>Step 2</title>
+                <image>https://storage.googleapis.com/bbulpett-test-bucket/test-problem.png</image>
                 <subtitle>
                     What is the output of this circuit on input x = 0, y = 1, and z = 0?
                 </subtitle>
             </card>
         </template>
     </category>
-     
+
     <category>
-        <pattern>0</pattern>
+        <pattern><set>testsolutions</set></pattern>
         <template>
-            You got it wrong
-        </template>
+            <think>
+                <set name="solution"><input index="1"/></set>
+            </think>
             
-        <pattern>1</pattern>
-        <template>
-            You got it right
+            <condition name="solution" value="0"> <!-- Answered incorrectly -->
+                <condition name="sign" value="aries"> <!-- Aries is creative -->
+                    Web Designer
+                </condition>
+                <condition name="sign" value="taurus"> <!-- Taurus is creative -->
+                    Web Designer
+                </condition>
+                <condition name="sign" value="gemini"> <!-- Gemini is creative-analytical -->
+                    Web Developer
+                </condition>
+                <condition name="sign" value="cancer"> <!-- Cancer is analytical -->
+                    Database Administrator
+                </condition>
+                <condition name="sign" value="leo"> <!-- Leo is analytical -->
+                    Database Administrator
+                </condition>
+                <condition name="sign" value="virgo"> <!-- Virgo is analytical -->
+                    Database Administrator
+                </condition>
+                <condition name="sign" value="libra"> <!-- Libra is creative-analytical -->
+                    Web Developer
+                </condition>
+                <condition name="sign" value="scorpio"> <!-- Scorpio is creative-analytical -->
+                    Web Developer
+                </condition>
+                <condition name="sign" value="sagittarius"> <!-- Sagittarius is creative -->
+                    Web Designer
+                </condition>
+                <condition name="sign" value="capricorn"> <!-- Capricorn is analytical -->
+                    Database Administrator
+                </condition>
+                <condition name="sign" value="aquarius"> <!-- Aquarius is creative-analytical -->
+                    Web Developer
+                </condition>
+                <condition name="sign" value="pisces"> <!-- Pisces is creative -->
+                    Web Designer
+                </condition>
+            </condition>
+
+            <condition name="solution" value="1"> <!-- Answered correctly -->
+                <condition name="sign" value="aries"> <!-- Aries is creative -->
+                    Hardware Engineer
+                </condition>
+                <condition name="sign" value="taurus"> <!-- Taurus is creative -->
+                    Hardware Engineer
+                </condition>
+                <condition name="sign" value="gemini"> <!-- Gemini is creative-analytical -->
+                    Systems Analyst
+                </condition>
+                <condition name="sign" value="cancer"> <!-- Cancer is analytical -->
+                    Computer Programmer
+                </condition>
+                <condition name="sign" value="leo"> <!-- Leo is analytical -->
+                    Computer Programmer
+                </condition>
+                <condition name="sign" value="virgo"> <!-- Virgo is analytical -->
+                    Computer Programmer
+                </condition>
+                <condition name="sign" value="libra"> <!-- Libra is creative-analytical -->
+                    Systems Analyst
+                </condition>
+                <condition name="sign" value="scorpio"> <!-- Scorpio is creative-analytical -->
+                    Systems Analyst
+                </condition>
+                <condition name="sign" value="sagittarius"> <!-- Sagittarius is creative -->
+                    Hardware Engineer
+                </condition>
+                <condition name="sign" value="capricorn"> <!-- Capricorn is analytical -->
+                    Computer Programmer
+                </condition>
+                <condition name="sign" value="aquarius"> <!-- Aquarius is creative-analytical -->
+                    Systems Analyst
+                </condition>
+                <condition name="sign" value="pisces"> <!-- Pisces is creative -->
+                    Hardware Engineer
+                </condition>
+            </condition>
         </template>
      </category>
 </aiml>
