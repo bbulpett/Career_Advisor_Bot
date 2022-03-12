@@ -4,18 +4,30 @@
         <pattern>*</pattern>
         <template>
             Sorry, I don't recognize "<star/>".<br />
-            Please type the word GO to begin.
+            Please type the word START if you'd like to start over.
         </template>
     </category>
     
     <category>
-        <pattern>GO</pattern>
+        <pattern>START</pattern>
         <template>
-            Welcome to the career advice bot!
+            <b>Welcome to the career advice bot!</b>
+            I'll do my best to find the right computer science career for you.
             To begin, I will need to ask some simple questions.
+            <reply>
+                <text>Continue?</text>
+                <postback>continue</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>CONTINUE</pattern>
+        <template>
+            Ok, great! First question...
+            <delay>1</delay>
             <card>
-                <title>Step 1</title>
-                <subtitle>What is your astrological sign?</subtitle>
+                <title>What is your astrological sign?</title>
                 <button><text>Aries (Mar 21 - Apr 19)</text><postback>Aries</postback></button>
                 <button><text>Taurus (Apr 20 - May 20)</text><postback>Taurus</postback></button>
                 <button><text>Gemini (May 21 - Jun 20)</text><postback>Gemini</postback></button>
@@ -35,15 +47,40 @@
         <pattern><set>signs</set></pattern>
         <template>
             <think>
-                <set name="sign"><input index="1"/></set>
+                <set name="sign">
+                    <input index="1"/>
+                </set>
+                <set name="trait">
+                    <map name="traits">
+                        <get name="sign" />
+                    </map>
+                </set>
             </think>
             
+            Awesome! Nice to meet you, <get name="sign" />. 
+            As a <get name="sign" />, you are <get name="trait" />!
+            <break/>
+            <delay>1</delay>
+            On to the next one...
+            <delay>1</delay>
             <card>
-                <title>Step 2</title>
-                <image>https://storage.googleapis.com/bbulpett-test-bucket/test-problem.png</image>
+                <image>
+                    https://storage.googleapis.com/bbulpett-test-bucket/test-problem.png
+                </image>
+                <title>
+                    Based on the above diagram,
+                </title>
                 <subtitle>
                     What is the output of this circuit on input x = 0, y = 1, and z = 0?
                 </subtitle>
+                <button>
+                    <text>0</text>
+                    <postback>0</postback>
+                </button>
+                <button>
+                    <text>1</text>
+                    <postback>1</postback>
+                </button>
             </card>
         </template>
     </category>
@@ -55,7 +92,13 @@
                 <set name="solution"><input index="1"/></set>
             </think>
             
-            <condition name="solution" value="0"> <!-- Answered incorrectly -->
+            <!-- Answered challenge incorrectly -->
+            <condition name="solution" value="0">
+                Actually, that is incorrect. But it's all good! Due to the fact
+                that you are <get name="trait" />, you can enjoy a successful
+                career as a
+                &#160; <!-- non-breaking space -->
+                
                 <condition name="sign" value="aries"> <!-- Aries is creative -->
                     Web Designer
                 </condition>
@@ -92,9 +135,15 @@
                 <condition name="sign" value="pisces"> <!-- Pisces is creative -->
                     Web Designer
                 </condition>
+                !
             </condition>
 
             <condition name="solution" value="1"> <!-- Answered correctly -->
+                Great job, that's correct! Also, given the fact that you 
+                are <get name="trait" />, you might be a rockstar in a career as
+                a
+                &#160; <!-- non-breaking space -->
+                
                 <condition name="sign" value="aries"> <!-- Aries is creative -->
                     Hardware Engineer
                 </condition>
@@ -105,13 +154,13 @@
                     Systems Analyst
                 </condition>
                 <condition name="sign" value="cancer"> <!-- Cancer is analytical -->
-                    Computer Programmer
+                    Database Administrator
                 </condition>
                 <condition name="sign" value="leo"> <!-- Leo is analytical -->
-                    Computer Programmer
+                    Database Administrator
                 </condition>
                 <condition name="sign" value="virgo"> <!-- Virgo is analytical -->
-                    Computer Programmer
+                    Database Administrator
                 </condition>
                 <condition name="sign" value="libra"> <!-- Libra is creative-analytical -->
                     Systems Analyst
@@ -123,7 +172,7 @@
                     Hardware Engineer
                 </condition>
                 <condition name="sign" value="capricorn"> <!-- Capricorn is analytical -->
-                    Computer Programmer
+                    Database Administrator
                 </condition>
                 <condition name="sign" value="aquarius"> <!-- Aquarius is creative-analytical -->
                     Systems Analyst
@@ -131,6 +180,7 @@
                 <condition name="sign" value="pisces"> <!-- Pisces is creative -->
                     Hardware Engineer
                 </condition>
+                !
             </condition>
         </template>
      </category>

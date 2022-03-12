@@ -1,14 +1,14 @@
 [
 ["aries", "creative"],
 ["taurus", "creative"],
-["gemini", "creative-analytical"],
+["gemini", "both creative and analytical"],
 ["cancer", "analytical"],
 ["leo", "analytical"],
 ["virgo", "analytical"],
-["libra", "creative-analytical"],
-["scorpio", "creative-analytical"],
+["libra", "both creative and analytical"],
+["scorpio", "both creative and analytical"],
 ["sagittarius", "creative"],
 ["capricorn", "analytical"],
-["aquarius", "creative-analytical"],
+["aquarius", "both creative and analytical"],
 ["pisces", "creative"]
 ]
