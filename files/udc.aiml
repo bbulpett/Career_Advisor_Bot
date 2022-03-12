@@ -182,6 +182,10 @@
                 </condition>
                 !
             </condition>
+            <reply>
+                <text>Start over?</text>
+                <postback>continue</postback>
+            </reply>
         </template>
      </category>
 </aiml>
