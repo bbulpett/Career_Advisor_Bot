@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <category>
-    <pattern>*</pattern>
-    <template>I have no answer for that.</template>
-  </category>
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Sorry, I don't recognize "<star/>".<br />
+            Please type the word GO to begin.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>GO</pattern>
+        <template>
+            Welcome to the career advice bot!
+            To begin, I will need to ask some simple questions.
+            <card>
+                <title>Step 1</title>
+                <subtitle>What is your astrological sign?</subtitle>
+                <button><text>Aries (Mar 21 - Apr 19)</text><postback>Aries</postback></button>
+                <button><text>Taurus (Apr 20 - May 20)</text><postback>Taurus</postback></button>
+                <button><text>Gemini (May 21 - Jun 20)</text><postback>Gemini</postback></button>
+                <button><text>Cancer (Jun 21 - Jul 22)</text><postback>Cancer</postback></button>
+                <button><text>Leo (Jul 23 - Aug 22)</text><postback>Leo</postback></button>
+                <button><text>Virgo (Aug 23 - Sep 22)</text><postback>Virgo</postback></button>
+                <button><text>Libra (Sep 23 - Oct 22)</text><postback>Libra</postback></button>
+                <button><text>Scorpio (Oct 23 - Nov 21)</text><postback>Scorpio</postback></button>
+                <button><text>Sagittarius (Nov 22 - Dec 21)</text><postback>Sagittarius</postback></button>
+                <button><text>Capricorn (Dec 22 - Jan 19)</text><postback>Capricorn</postback></button>
+                <button><text>Pisces (Feb 19 - Mar 20)</text><postback>Pisces</postback></button>
+            </card>
+        </template>
+    </category>
+    
+    <category>
+        <pattern><set>signs</set></pattern>
+        <template>
+            <think>
+                <set name="sign"><input index="1"/></set>
+            </think>
+            <card>
+                <title>Step 2</title>
+                <subtitle>
+                    What is the output of this circuit on input x = 0, y = 1, and z = 0?
+                </subtitle>
+            </card>
+        </template>
+    </category>
+     
+    <category>
+        <pattern>0</pattern>
+        <template>
+            You got it wrong
+        </template>
+            
+        <pattern>1</pattern>
+        <template>
+            You got it right
+        </template>
+     </category>
 </aiml>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>INITIAL BOT MESSAGE</pattern>
+        <template>
+            <button>
+                <text>Aries (Mar 21 - Apr 19)</text>
+                <postback>xaries</postback>
+            </button>
+            <button>
+                <text>Taurus (Apr 20 - May 20)</text>
+                <postback>xtaurus</postback>
+            </button>
+            <button>
+                <text>Gemini (May 21 - Jun 20)</text>
+                <postback>xgemini</postback>
+            </button>
+            <button>
+                <text>Cancer (Jun 21 - Jul 22)</text>
+                <postback>xcancer</postback>
+            </button>
+            <button>
+                <text>Leo (Jul 23 - Aug 22)</text>
+                <postback>xleo</postback>
+            </button>
+            <button>
+                <text>Virgo (Aug 23 - Sep 22)</text>
+                <postback>xvirgo</postback>
+            </button>
+            <button>
+                <text>Libra (Sep 23 - Oct 22)</text>
+                <postback>xlibra</postback>
+            </button>
+            <button>
+                <text>Scorpio (Oct 23 - Nov 21)</text>
+                <postback>xscorpio</postback>
+            </button>
+            <button>
+                <text>Sagittarius (Nov 22 - Dec 21)</text>
+                <postback>xsagittarius</postback>
+            </button>
+            <button>
+                <text>Capricorn (Dec 22 - Jan 19)</text>
+                <postback>xsagittarius</postback>
+            </button>
+            <button>
+                <text>Aquarius (Jan 20 - Feb 18)</text>
+                <postback>xsagittarius</postback>
+            </button>
+            <button>
+                <text>Pisces (Feb 19 - Mar 20)</text>
+                <postback>xsagittarius</postback>
+            </button>
+        </template>
+    </category>
+</aiml>
