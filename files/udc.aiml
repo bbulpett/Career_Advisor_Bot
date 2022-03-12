@@ -28,17 +28,50 @@
             <delay>1</delay>
             <card>
                 <title>What is your astrological sign?</title>
-                <button><text>Aries (Mar 21 - Apr 19)</text><postback>Aries</postback></button>
-                <button><text>Taurus (Apr 20 - May 20)</text><postback>Taurus</postback></button>
-                <button><text>Gemini (May 21 - Jun 20)</text><postback>Gemini</postback></button>
-                <button><text>Cancer (Jun 21 - Jul 22)</text><postback>Cancer</postback></button>
-                <button><text>Leo (Jul 23 - Aug 22)</text><postback>Leo</postback></button>
-                <button><text>Virgo (Aug 23 - Sep 22)</text><postback>Virgo</postback></button>
-                <button><text>Libra (Sep 23 - Oct 22)</text><postback>Libra</postback></button>
-                <button><text>Scorpio (Oct 23 - Nov 21)</text><postback>Scorpio</postback></button>
-                <button><text>Sagittarius (Nov 22 - Dec 21)</text><postback>Sagittarius</postback></button>
-                <button><text>Capricorn (Dec 22 - Jan 19)</text><postback>Capricorn</postback></button>
-                <button><text>Pisces (Feb 19 - Mar 20)</text><postback>Pisces</postback></button>
+                <button>
+                    <text>Aries (Mar 21 - Apr 19)</text>
+                    <postback>Aries</postback>
+                </button>
+                <button>
+                    <text>Taurus (Apr 20 - May 20)</text>
+                    <postback>Taurus</postback>
+                </button>
+                <button>
+                    <text>Gemini (May 21 - Jun 20)</text>
+                    <postback>Gemini</postback>
+                </button>
+                <button>
+                    <text>Cancer (Jun 21 - Jul 22)</text>
+                    <postback>Cancer</postback>
+                </button>
+                <button>
+                    <text>Leo (Jul 23 - Aug 22)</text>
+                    <postback>Leo</postback>
+                </button>
+                <button>
+                    <text>Virgo (Aug 23 - Sep 22)</text>
+                    <postback>Virgo</postback>
+                </button>
+                <button>
+                    <text>Libra (Sep 23 - Oct 22)</text>
+                    <postback>Libra</postback>
+                </button>
+                <button>
+                    <text>Scorpio (Oct 23 - Nov 21)</text>
+                    <postback>Scorpio</postback>
+                </button>
+                <button>
+                    <text>Sagittarius (Nov 22 - Dec 21)</text>
+                    <postback>Sagittarius</postback>
+                </button>
+                <button>
+                    <text>Capricorn (Dec 22 - Jan 19)</text>
+                    <postback>Capricorn</postback>
+                </button>
+                <button>
+                    <text>Pisces (Feb 19 - Mar 20)</text>
+                    <postback>Pisces</postback>
+                </button>
             </card>
         </template>
     </category>
